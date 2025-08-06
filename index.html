@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Adil Ansari • Portfolio</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- NAV -->
+  <nav id="nav">
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#research">Research</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- HERO / ABOUT -->
+  <section id="about" class="section" data-aos="fade-up">
+    <h1>Adil Ansari</h1>
+    <p>Network Engineer • Electronics & AI/ML Enthusiast</p>
+    <p><a href="https://linkedin.com/in/adilansari57">LinkedIn</a> • <a href="https://github.com/a3il">GitHub</a></p>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section">
+    <h2 data-aos="fade-right">Work Experience</h2>
+    <div data-aos="fade-up" class="card">
+      <h3>Firepro Star Safety & Security (L2 Network Engineer)</h3>
+      <span>May 2024–Jun 2025 | Dubai Silicon Oasis</span>
+      <ul>
+        <li>Optimized OSPF & IPSEC/VPN; cut VPN management by 50% via Tailscale</li>
+        <li>SNMP monitoring & SIRA compliance reporting</li>
+        <li>Fortinet / AWS security policies & audit docs</li>
+      </ul>
+    </div>
+    <!-- Repeat for other roles, each with data-aos="fade-up" -->
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <h2 data-aos="fade-left">Projects</h2>
+    <div class="grid">
+      <div class="card" data-aos="zoom-in">
+        <h3>Mission 100K ft</h3>
+        <p>High-altitude live video/telemetry system for weather balloons.</p>
+      </div>
+      <div class="card" data-aos="zoom-in" data-aos-delay="100">
+        <h3>Pneumonia Detection using U-Net</h3>
+        <p>96% accuracy via U-Net segmentation, CNN & SVM.</p>
+      </div>
+      <!-- Add rest similarly, incrementing data-aos-delay -->
+    </div>
+  </section>
+
+  <!-- RESEARCH -->
+  <section id="research" class="section">
+    <h2 data-aos="fade-right">Research</h2>
+    <ul data-aos="fade-up">
+      <li><strong>Pneumonia Detection…</strong> (Unpublished)</li>
+      <li><strong>Drone Detection & Classification…</strong> (Published)</li>
+    </ul>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <h2 data-aos="fade-left">Skills & Tools</h2>
+    <p data-aos="fade-up">
+      OSPF · BGP · IPSEC/SSL VPN · Tailscale · Fortinet · AWS VPC · Python · Ansible · SNMP · Zabbix · ServiceNow · Jira · …and more
+    </p>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section" data-aos="fade-up">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:adilansari57@gmail.com">adilansari57@gmail.com</a></p>
+    <p>Dubai • +971 58 139 1657</p>
+  </section>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800 });
+    // Smooth scroll
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(link.getAttribute('href'))
+                .scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>
