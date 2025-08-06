@@ -1,48 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Adil Ansari • Portfolio</title>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
   <!-- NAV -->
   <nav id="nav">
     <a href="#about">About</a>
     <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
     <a href="#projects">Projects</a>
     <a href="#research">Research</a>
+    <a href="#certifications">Certifications</a>
     <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <!-- HERO / ABOUT -->
+  <!-- ABOUT -->
   <section id="about" class="section" data-aos="fade-up">
     <h1>Adil Ansari</h1>
-    <p>Network Engineer • Electronics & AI/ML Enthusiast</p>
-    <p><a href="https://linkedin.com/in/adilansari57">LinkedIn</a> • <a href="https://github.com/a3il">GitHub</a></p>
+    <p class="sub">Network Engineer • Electronics & AI/ML Enthusiast</p>
+    <p>
+      <a href="mailto:adilansari57@gmail.com">adilansari57@gmail.com</a> •
+      <a href="https://linkedin.com/in/adilansari57" target="_blank">LinkedIn</a> •
+      <a href="https://github.com/a3il" target="_blank">GitHub</a> • Dubai • +971 58 139 1657
+    </p>
+    <h2>Professional Summary</h2>
+    <p>
+      Network Engineer with 3 years of experience in networking (LAN/WAN, TCP/IP, NAC,
+      routing/switching) and support systems (AD, ITSM). Skilled with OSPF/BGP, IPSEC/SSL
+      VPN (Fortinet/Sophos), zero trust (Tailscale), IDS/IPS, firewalls, SIRA compliance,
+      AWS VPC integrations. Automation with Python, Ansible, PowerShell/Bash and SNMP
+      (Zabbix, Dynatrace, SolarWinds). Experienced in ITSM (ServiceNow, Jira).
+    </p>
   </section>
 
-  <!-- EXPERIENCE -->
-  <section id="experience" class="section">
-    <h2 data-aos="fade-right">Work Experience</h2>
-    <div data-aos="fade-up" class="card">
-      <h3>Firepro Star Safety & Security (L2 Network Engineer)</h3>
-      <span>May 2024–Jun 2025 | Dubai Silicon Oasis</span>
-      <ul>
-        <li>Optimized OSPF & IPSEC/VPN; cut VPN management by 50% via Tailscale</li>
-        <li>SNMP monitoring & SIRA compliance reporting</li>
-        <li>Fortinet / AWS security policies & audit docs</li>
-      </ul>
+  <!-- EXPERIENCE (Accordion) -->
+  <section id="experience" class="section" data-aos="fade-up">
+    <h2>Work Experience</h2>
+
+    <div class="accordion">
+      <button class="accordion-btn">Firepro Star Safety & Security (L2 Network Engineer)<span>May 2024 – Jun 2025</span></button>
+      <div class="accordion-panel">
+        <ul>
+          <li>Optimized OSPF routing and IPSEC/VPN connectivity.</li>
+          <li>Site-to-site IPSEC and SSL VPN (Fortinet); cut manual VPN management by 50% via Tailscale.</li>
+          <li>SNMP with Zabbix & CloudWatch; produced SIRA compliance reports.</li>
+          <li>Authored Fortinet & AWS security group policies; prepared audit-ready documentation.</li>
+        </ul>
+      </div>
+
+      <button class="accordion-btn">BSNL RTTC (L2 Network Engineer)<span>Jun 2022 – Sep 2022</span></button>
+      <div class="accordion-panel">
+        <ul>
+          <li>Configured OSPF, BGP, MPLS VPN, VLAN trunking on telecom testbeds.</li>
+          <li>Managed VOIP PBX systems & applied QoS policies.</li>
+          <li>Analyzed SNMP traps, NetFlow, syslog using SolarWinds & Dynatrace.</li>
+          <li>Collaborated on SD-WAN hybrid (MPLS + broadband) trials.</li>
+          <li>Designed & documented per BSNL & TRAI compliance.</li>
+        </ul>
+      </div>
+
+      <button class="accordion-btn">Amy Fashions Online (Network Engineer)<span>Apr 2021 – May 2022</span></button>
+      <div class="accordion-panel">
+        <ul>
+          <li>Configured OSPF routing & VLANs for POS, ERP & office networks.</li>
+          <li>IPSEC site-to-site VPN between network and AWS VPC.</li>
+          <li>Automated SNMP monitoring with Python & Zabbix.</li>
+        </ul>
+      </div>
     </div>
-    <!-- Repeat for other roles, each with data-aos="fade-up" -->
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="section" data-aos="fade-up">
+    <h2>Education</h2>
+    <ul class="timeline">
+      <li>
+        <strong>B.Tech in Electronics & Communications</strong><br/>
+        Cochin University of Science & Technology — May 2024
+      </li>
+      <li>
+        <strong>Diploma in Electronics & Communications</strong><br/>
+        Directorate of Technical Education — Apr 2021
+      </li>
+      <li>
+        <strong>High School (Science & Economics)</strong><br/>
+        Our Own High School, Dubai — Mar 2017
+      </li>
+    </ul>
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects" class="section">
-    <h2 data-aos="fade-left">Projects</h2>
+  <section id="projects" class="section" data-aos="fade-up">
+    <h2>Projects</h2>
     <div class="grid">
       <div class="card" data-aos="zoom-in">
         <h3>Mission 100K ft</h3>
@@ -50,45 +108,113 @@
       </div>
       <div class="card" data-aos="zoom-in" data-aos-delay="100">
         <h3>Pneumonia Detection using U-Net</h3>
-        <p>96% accuracy via U-Net segmentation, CNN & SVM.</p>
+        <p>96% accuracy with U-Net segmentation, CNN & SVM.</p>
       </div>
-      <!-- Add rest similarly, incrementing data-aos-delay -->
+      <div class="card" data-aos="zoom-in" data-aos-delay="200">
+        <h3>Point Cloud Mapping Robot</h3>
+        <p>3D SLAM-based mapping robot for AR/VR.</p>
+      </div>
+      <div class="card" data-aos="zoom-in" data-aos-delay="300">
+        <h3>Remote Aquaponic System</h3>
+        <p>IoT-based sustainable green farming platform.</p>
+      </div>
+      <div class="card" data-aos="zoom-in" data-aos-delay="400">
+        <h3>Boost Converter</h3>
+        <p>83.3% efficient DC-DC converter for EVs.</p>
+      </div>
+      <div class="card" data-aos="zoom-in" data-aos-delay="500">
+        <h3>Embedded AI Modeling</h3>
+        <p>AI deployment on low-power microcontrollers (Arduino, STM).</p>
+      </div>
+      <div class="card" data-aos="zoom-in" data-aos-delay="600">
+        <h3>Motion Detection (IoT)</h3>
+        <p>NodeMCU + MQTT + Adafruit server motion detector.</p>
+      </div>
+      <div class="card" data-aos="zoom-in" data-aos-delay="700">
+        <h3>Object Classifier</h3>
+        <p>RCNN & LIDAR on Raspberry Pi using TensorFlow API.</p>
+      </div>
+      <div class="card" data-aos="zoom-in" data-aos-delay="800">
+        <h3>Contactless Thermometer</h3>
+        <p>LIDAR-based temperature measurement + Android app.</p>
+      </div>
+      <div class="card" data-aos="zoom-in" data-aos-delay="900">
+        <h3>Air Quality Monitor</h3>
+        <p>Cheap IoT-based AQI monitoring system.</p>
+      </div>
     </div>
   </section>
 
   <!-- RESEARCH -->
-  <section id="research" class="section">
-    <h2 data-aos="fade-right">Research</h2>
-    <ul data-aos="fade-up">
-      <li><strong>Pneumonia Detection…</strong> (Unpublished)</li>
-      <li><strong>Drone Detection & Classification…</strong> (Published)</li>
+  <section id="research" class="section" data-aos="fade-up">
+    <h2>Research</h2>
+    <ul>
+      <li>
+        <strong>Pneumonia Detection & Classification using CXR</strong><br/>
+        A. Ansari, J. Shah P. A., D. Sankar — (Unpublished)
+      </li>
+      <li>
+        <strong>Drone Detection & Classification using RF Signals</strong><br/>
+        A. Ansari — IIT Patna, 2023 (Published; 98.3% real-time accuracy)
+      </li>
+    </ul>
+  </section>
+
+  <!-- CERTIFICATIONS & AWARDS -->
+  <section id="certifications" class="section" data-aos="fade-up">
+    <h2>Certifications & Awards</h2>
+    <ul class="two-col">
+      <li>CCNA (in progress)</li>
+      <li>BSNL RTTC Telecom Technologies</li>
+      <li>Embedded AI System Design</li>
+      <li>GRE & IELTS</li>
+      <li>Microsoft Insider (Windows 10)</li>
+      <li>IEEE Hackathon 1st Place (2023)</li>
+      <li>L&T Techgium Finalist (2023)</li>
+      <li>F1 in Schools UAE</li>
+      <li>TEDx CUSAT Speaker</li>
+      <li>IEEE Member & SEDS Curation Head</li>
     </ul>
   </section>
 
   <!-- SKILLS -->
-  <section id="skills" class="section">
-    <h2 data-aos="fade-left">Skills & Tools</h2>
-    <p data-aos="fade-up">
-      OSPF · BGP · IPSEC/SSL VPN · Tailscale · Fortinet · AWS VPC · Python · Ansible · SNMP · Zabbix · ServiceNow · Jira · …and more
+  <section id="skills" class="section" data-aos="fade-up">
+    <h2>Skills</h2>
+    <p class="skills">
+      OSPF · BGP · EIGRP · MPLS · SD-WAN · VLAN · NAT · IPSEC/SSL VPN · Zero Trust · IDS/IPS ·
+      Cisco · Fortinet · AWS VPC · Python · Ansible · SNMP · Zabbix · ServiceNow · Jira ·
+      VMware · Linux · Windows Server · IoT · AI/ML · MATLAB · & more
     </p>
+    <h3>Languages</h3>
+    <p>English (Fluent) · Hindi (Fluent) · Malayalam (Native) · Arabic (Reading/Writing)</p>
   </section>
 
   <!-- CONTACT -->
   <section id="contact" class="section" data-aos="fade-up">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:adilansari57@gmail.com">adilansari57@gmail.com</a></p>
-    <p>Dubai • +971 58 139 1657</p>
+    <p>Location: Dubai · +971 58 139 1657</p>
   </section>
 
+  <!-- AOS & Accordion Script -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 800 });
-    // Smooth scroll
-    document.querySelectorAll('nav a').forEach(link => {
+    // Smooth scroll nav
+    document.querySelectorAll('#nav a').forEach(link => {
       link.addEventListener('click', e => {
         e.preventDefault();
         document.querySelector(link.getAttribute('href'))
                 .scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+    // Accordion
+    document.querySelectorAll('.accordion-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('active');
+        let panel = btn.nextElementSibling;
+        panel.style.maxHeight =
+          panel.style.maxHeight ? null : panel.scrollHeight + 'px';
       });
     });
   </script>
